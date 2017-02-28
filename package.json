@@ -1,0 +1,24 @@
+{
+  "name": "bookstore",
+  "version": "0.1.0",
+  "description": "Simple bookstore without Ecommerce",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/halo123u/bookstore.git"
+  },
+  "author": "Oswaldo Almazo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/halo123u/bookstore/issues"
+  },
+  "homepage": "https://github.com/halo123u/bookstore#readme",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "mongoose": "^4.8.5"
+  }
+}
