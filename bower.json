@@ -1,0 +1,23 @@
+{
+  "name": "bookstore",
+  "description": "Simple bookstore without Ecommerce",
+  "main": "app.js",
+  "authors": [
+    "Oswaldo Almazo"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/halo123u/bookstore",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "angular": "^1.6.2",
+    "angular-route": "^1.6.2",
+    "jquery": "^3.1.1"
+  }
+}
