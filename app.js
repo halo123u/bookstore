@@ -12,7 +12,7 @@ Genre = require('./models/genre');
 Book = require('./models/book');
 //connect to mongoose
 mongoose.connect('mongodb://localhost/bookstore');
-const db = mongoose.connection;
+var db = mongoose.connection;
 
 app.get('/', function(req,res){
     res.send('Please use /api/books or api/genres');
