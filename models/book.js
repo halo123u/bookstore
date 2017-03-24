@@ -38,22 +38,22 @@ const bookSchema = mongoose.Schema({
 const Book = module.exports = mongoose.model('Book',bookSchema);
 
 //Get Books
-module.exports.getBooks = function (callback,limit) {
+module.exports.getBooks =  (callback,limit) => {
         Book.find(callback).limit(limit);
 }
 
 //Get Book
-module.exports.getBookById = function (id, callback) {
+module.exports.getBookById = (id, callback) => {
         Book.findById(id,callback);
 }
 //Add book
-module.exports.addBook = function (book,callback) {
+module.exports.addBook = (book,callback) => {
     Book.create(book,callback);
 }
 //Update 
-module.exports.updateBook = function (id,book,options,callback) {
-    const query={_id: id};
-    const update = {
+module.exports.updateBook = (id,book,options,callback) => {
+    var query={_id: id};
+    var update = {
         title: book.title,
         genre: book.genre,
         description: book.description,
@@ -67,7 +67,7 @@ module.exports.updateBook = function (id,book,options,callback) {
 }
 
 //Delete Books 
-module.exports.deleteBook = function (id,callback) {
-    const query = {_id: id};
+module.exports.deleteBook = (id,callback) => {
+    var query = {_id: id};
     Book.remove(query, callback);
 }

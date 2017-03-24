@@ -1,37 +1,37 @@
 var myApp = angular.module('myApp');
 
-myApp.controller('BooksController', ['$scope', '$http', '$location', '$routeParams', function($scope, $http, $location, $routeParams){
+myApp.controller('BooksController', ['$scope', '$http', '$location', '$routeParams', ($scope, $http, $location, $routeParams) => {
 	console.log('BooksController loaded...');
 
-	$scope.getBooks = function(){
-		$http.get('/api/books').then(function(response){
+	$scope.getBooks = () =>{
+		$http.get('/api/books').then((response) => {
 			$scope.books = response.data;
 		});
 	}
 
-	$scope.getBook = function(){
+	$scope.getBook = () => {
 		var id = $routeParams.id;
-		$http.get('/api/books/'+id).then(function(response){
+		$http.get('/api/books/'+id).then((response) =>{
 			$scope.book = response.data;
 		});
 	}
 
-	$scope.addBook = function(){
+	$scope.addBook = () => {
 		console.log($scope.book);
-		$http.post('/api/books/',$scope.book).then(function(response){
+		$http.post('/api/books/',$scope.book).then((response) =>{
 			window.location.href= '#/books';
 		});
 	}	
 	
-	$scope.updateBook = function(){
+	$scope.updateBook = () => {
 		var id = $routeParams.id;
-		$http.put('/api/books/'+id,$scope.book).then(function(response){
+		$http.put('/api/books/'+id,$scope.book).then((response) => {
 			window.location.href= '#/books';
 		});
 	}
 
-	$scope.removeBook = function(id){
-		$http.delete('/api/books/'+id).then(function(response){
+	$scope.removeBook = (id) => {
+		$http.delete('/api/books/'+id).then((response) => {
 			window.location.href= '#/books';
 		});
 	}
